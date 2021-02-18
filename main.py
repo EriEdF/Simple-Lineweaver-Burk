@@ -11,16 +11,16 @@ def import_data(data_file):
     try:
         return pd.read_csv(data_file)
     except FileNotFoundError:
-        print("No such file as: " + data_file)
+        print('No such file as: ' + data_file)
         exit()
 
 try:
-    print("Input data: " + sys.argv[1])
+    print('Input data: ' + sys.argv[1])
     filename = sys.argv[1]
 except IndexError:
     print("No filename given, using 'sample_data.csv'")
     print("To use own data give the filname as an argument: python main.py 'filename'")
-    filename = "sample_data.csv"
+    filename = 'sample_data.csv'
 
 df = import_data(filename)
 print(df)
@@ -46,21 +46,19 @@ reci_Km = solve(expr)
 Km = 1 / abs(reci_Km[0])
 Vmax = 1 / abs(B)
 
-print(f'{[0, x[0]]}')
-print(f'{[model.intercept_, y_pred[0]]}')
+Km_round = format(Km, '.3e')
+Vmax_round = format(Vmax, '.3e')
 
-plt.plot(x, y_pred, color='k', label='Regression model')
-plt.plot([reci_Km, x[0]], [0, y_pred[0]], c="k",  linestyle='--')
-plt.scatter(x, y, edgecolor='k', facecolor='blue', alpha=0.5, label='Sample data')
-plt.xlabel("1 / [Substrate]")
-plt.ylabel("1 / Enzyme Activity")
-plt.legend(facecolor='white')
-plt.show()
-
-print('')
-print(f"y = {M}x + {B}")
 print(' ')
 print(f'Km: {Km}')
 print(f'Vmax: {Vmax}')
 print(' ')
-print("Coefficient of determination:", model.score(x, y))
+print('Coefficient of determination:', model.score(x, y))
+
+plt.plot([reci_Km, x[0]], [0, y_pred[0]], c='k',  linestyle='--')
+plt.plot(x, y_pred, color='k', label='Regression model')
+plt.scatter(x, y, edgecolor='k', facecolor='blue', alpha=0.5, label='Sample data')
+plt.xlabel('1 / [Substrate]')
+plt.ylabel('1 / Enzyme Activity')
+plt.legend(facecolor='white')
+plt.show()
