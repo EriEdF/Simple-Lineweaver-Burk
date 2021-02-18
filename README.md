@@ -27,13 +27,14 @@ Save your data as .csv file like this (or see sample_data.csv):
 | 0.0065 | 80  |
 | ...    | ... |
 
-Input your data or run without arguments to automatically use sample_data.csv
+Input your data as an argument (or run without to automatically use sample_data.csv)
 ```
 $ python main.py `your_data.csv`
 ```
 
-# Interpretation of output
+# Interpretation
 Nice and fast way to distinguish different types of enzyme inhibition. Using the Lineweaver–Burk equation for the determination of Km and Vmax is not recommended.
 
 ![Enzyme_Inhibition](https://upload.wikimedia.org/wikipedia/commons/8/87/Enzyme_Inhibition_lineweaver-burk_plots.gif)
+
 Bizz1111, CC0, via Wikimedia Commons
