@@ -9,6 +9,7 @@ Vmax: 0.2536312215910251
 ```
 
 # Dependencies
+- Python 3
 - Pandas
 - Numpy
 - Matplotlib
