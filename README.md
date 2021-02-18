@@ -35,5 +35,5 @@ $ python main.py `your_data.csv`
 # Interpretation of output
 Nice and fast way to distinguish different types of enzyme inhibition. Using the Lineweaver–Burk equation for the determination of Km and Vmax is not recommended.
 
-![Enzyme_Inhibition_lineweaver-burk_plots](https://commons.wikimedia.org/wiki/File:Enzyme_Inhibition_lineweaver-burk_plots.gif)
+![Enzyme_Inhibition](https://upload.wikimedia.org/wikipedia/commons/8/87/Enzyme_Inhibition_lineweaver-burk_plots.gif)
 Bizz1111, CC0, via Wikimedia Commons
