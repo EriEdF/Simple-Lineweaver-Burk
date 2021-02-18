@@ -7,12 +7,14 @@ from sklearn.linear_model import LinearRegression
 
 plt.style.use('ggplot')
 
+
 def import_data(data_file):
     try:
         return pd.read_csv(data_file)
     except FileNotFoundError:
         print('No such file as: ' + data_file)
         exit()
+
 
 try:
     print('Input data: ' + sys.argv[1])
