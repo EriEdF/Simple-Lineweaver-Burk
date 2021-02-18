@@ -6,6 +6,8 @@ Analysis of Michaelis–Menten enzyme kinetics using the Lineweaver–Burk equat
 ```
 Km: 0.000141811172810182
 Vmax: 0.2536312215910251
+
+Coefficient of determination: 0.995776951975508
 ```
 
 # Dependencies
