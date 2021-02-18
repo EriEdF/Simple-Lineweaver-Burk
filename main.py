@@ -46,8 +46,6 @@ reci_Km = solve(expr)
 Km = 1 / abs(reci_Km[0])
 Vmax = 1 / abs(B)
 
-Km_round = format(Km, '.3e')
-Vmax_round = format(Vmax, '.3e')
 
 print(' ')
 print(f'Km: {Km}')
