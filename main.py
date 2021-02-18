@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 from sympy import symbols, solve
 from sklearn.linear_model import LinearRegression
 
-plt.style.use('default')
 plt.style.use('ggplot')
 
 def import_data(data_file):
@@ -47,9 +46,12 @@ reci_Km = solve(expr)
 Km = 1 / abs(reci_Km[0])
 Vmax = 1 / abs(B)
 
+print(f'{[0, x[0]]}')
+print(f'{[model.intercept_, y_pred[0]]}')
+
 plt.plot(x, y_pred, color='k', label='Regression model')
+plt.plot([reci_Km, x[0]], [0, y_pred[0]], c="k",  linestyle='--')
 plt.scatter(x, y, edgecolor='k', facecolor='blue', alpha=0.5, label='Sample data')
-plt.plot(x, y_pred, color='k', label='Regression model')
 plt.xlabel("1 / [Substrate]")
 plt.ylabel("1 / Enzyme Activity")
 plt.legend(facecolor='white')
