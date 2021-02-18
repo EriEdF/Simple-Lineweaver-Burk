@@ -11,6 +11,7 @@ Coefficient of determination: 0.995776951975508
 ```
 
 # Dependencies
+- Python 3
 - Pandas
 - Numpy
 - Matplotlib
