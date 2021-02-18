@@ -20,7 +20,7 @@ try:
 except IndexError:
     print("No filename given, using 'sample_data.csv'")
     print("To use own data give the filname as an argument: python main.py 'filename'")
-    filename = 'sample_data.csv'
+    filename = 'sample_data/sample_data.csv'
 
 df = import_data(filename)
 print(df)
