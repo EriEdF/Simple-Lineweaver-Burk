@@ -2,7 +2,7 @@
 Analysis of Michaelis–Menten enzyme kinetics using the Lineweaver–Burk equation. Draws the Lineweaver–Burk plot using linear regression and estimates Km + Vmax.
 
 # Example Output:
-![sample_output]
+![sample_output](https://github.com/EriEdF/Simple-Lineweaver-Burk/blob/main/sample_data/sample_output.png)
 ```
 Km: 0.000141811172810182
 Vmax: 0.2536312215910251
@@ -35,5 +35,5 @@ $ python main.py `your_data.csv`
 # Interpretation of output
 Nice and fast way to distinguish different types of enzyme inhibition. Using the Lineweaver–Burk equation for the determination of Km and Vmax is not recommended.
 
-![Enzyme_Inhibition_lineweaver-burk_plots]https://commons.wikimedia.org/wiki/File:Enzyme_Inhibition_lineweaver-burk_plots.gif
+![Enzyme_Inhibition_lineweaver-burk_plots](https://commons.wikimedia.org/wiki/File:Enzyme_Inhibition_lineweaver-burk_plots.gif)
 Bizz1111, CC0, via Wikimedia Commons
