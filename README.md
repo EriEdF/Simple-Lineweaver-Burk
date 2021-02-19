@@ -1,5 +1,5 @@
 # Simple-Lineweaver–Burk
-Analysis of Michaelis–Menten enzyme kinetics using the Lineweaver–Burk equation. Draws the Lineweaver–Burk plot using linear regression and estimates Km + Vmax.
+Analysis of Michaelis–Menten enzyme kinetics using the Lineweaver–Burk equation. Plots the Lineweaver–Burk graph using linear regression and estimates Km + Vmax.
 
 ## Example Output:
 ![sample_output](https://github.com/EriEdF/Simple-Lineweaver-Burk/blob/main/sample_data/sample_output.png)
