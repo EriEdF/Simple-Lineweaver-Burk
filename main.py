@@ -2,7 +2,6 @@ import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sympy import symbols, solve
 from sklearn.linear_model import LinearRegression
 
 plt.style.use('ggplot')
@@ -38,14 +37,12 @@ M = model.coef_[0]
 B = model.intercept_
 
 # solve equation to get 1/Km
-xvar = symbols('xvar')
-expr = M * xvar + B
-reci_Km = solve(expr)
+reci_Km = -B / M
+reci_Km_plot = [reci_Km]
 
 # no more reciprocals
-Km = 1 / abs(reci_Km[0])
+Km = 1 / abs(reci_Km)
 Vmax = 1 / abs(B)
-
 
 print(' ')
 print(f'Km: {Km}')
@@ -53,7 +50,7 @@ print(f'Vmax: {Vmax}')
 print(' ')
 print('Coefficient of determination:', model.score(x, y))
 
-plt.plot([reci_Km, x[0]], [0, y_pred[0]], c='k',  linestyle='--')
+plt.plot([reci_Km_plot, x[0]], [0, y_pred[0]], c='k',  linestyle='--')
 plt.plot(x, y_pred, color='k', label='Regression model')
 plt.scatter(x, y, edgecolor='k', facecolor='blue', alpha=0.5, label='Sample data')
 plt.xlabel('1 / [Substrate]')

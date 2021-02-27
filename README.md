@@ -16,13 +16,12 @@ Coefficient of determination: 0.995776951975508
 - Pandas
 - Numpy
 - Matplotlib
-- SymPy
 - Scikit-learn
 
 Install python dependencies:
 ```
 # using pip package manager
-$ pip install pandas numpy matplotlib sympy sklearn
+$ pip install pandas numpy matplotlib sklearn
 ```
 Save your data as .csv file. Place the substrate concentration in the 'cS' column and reaction rate in the 'v' column (Example: /sample_data/sample_data.csv ):
 | cS     | v   |
