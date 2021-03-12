@@ -14,7 +14,6 @@ def import_data(data_file):
         exit()
 
 try:
-    print('Input data: ' + sys.argv[1])
     filename = sys.argv[1]
 except IndexError:
     print("No filename given, using 'sample_data.csv'")
@@ -33,16 +32,11 @@ y = np.array(df.v)
 model = LinearRegression().fit(x, y)
 y_pred = model.predict(x)
 
-M = model.coef_[0]
-B = model.intercept_
+# y = mx + b; reci_Km = 1/Km
+reci_Km = -model.intercept_ / model.coef_[0]
 
-# solve equation to get 1/Km
-reci_Km = -B / M
-reci_Km_plot = [reci_Km]
-
-# no more reciprocals
 Km = 1 / abs(reci_Km)
-Vmax = 1 / abs(B)
+Vmax = 1 / abs(model.intercept_)
 
 print(' ')
 print(f'Km: {Km}')
@@ -50,7 +44,7 @@ print(f'Vmax: {Vmax}')
 print(' ')
 print('Coefficient of determination:', model.score(x, y))
 
-plt.plot([reci_Km_plot, x[0]], [0, y_pred[0]], c='k',  linestyle='--')
+plt.plot([[reci_Km], x[0]], [0, y_pred[0]], c='k',  linestyle='--')
 plt.plot(x, y_pred, color='k', label='Regression model')
 plt.scatter(x, y, edgecolor='k', facecolor='blue', alpha=0.5, label='Sample data')
 plt.xlabel('1 / [Substrate]')
