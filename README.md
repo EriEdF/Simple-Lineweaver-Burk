@@ -30,7 +30,7 @@ Save your data as .csv file. Place the substrate concentration in the 'cS' colum
 | 0.0065 | 80  |
 | ...    | ... |
 
-Input your data as an argument (or run without to automatically use sample_data.csv)
+Input your data as an argument (or run without to use sample_data.csv)
 ```
 # run with your data
 $ python main.py `your_data.csv`
